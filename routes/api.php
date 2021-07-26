@@ -4,7 +4,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\API\AuthController;
 use App\Http\Controllers\API\FormController;
-use App\Http\Controllers\API\ScoreController;
+use App\Http\Controllers\API\ProdukController;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,7 +28,7 @@ Route::group(['middleware' => 'auth:sanctum'], function(){
     Route::get('/delete/{id}', [FormController::class, 'delete']);
 
     //crud score with relation to student
-    Route::post('/create-score-student', [ScoreController::class, 'create']);
+    Route::post('/create-produk-supplier', [ProdukController::class, 'create']);
 
     Route::get('/logout', [AuthController::class, 'logout']);
 });
